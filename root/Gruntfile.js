@@ -52,7 +52,10 @@ module.exports = function(grunt) {
     watch: {
       src: {
         files: ['assets/js/**/*.js', 'assets/less/**/*.less'],
-        tasks: ['default']
+        tasks: ['default'],
+        options: {
+          nospawn: true
+        }
       },
     },
 

@@ -16,7 +16,7 @@ exports.notes = 'HELLO! Let\'s build better internet! \nThis is webApp template 
   'including LESS with LESSHAT mixins and RequireJS + /server, watch, jshint, uglify and automatic open/.';
 
 // Template-specific notes to be displayed after question prompts.
-exports.after = 'Done!';
+exports.after = 'Done! \nHappy Coding!';
 
 // Any existing file or directory matching this wildcard will cause a warning.
 exports.warnOn = '*';
@@ -27,7 +27,7 @@ exports.template = function(grunt, init, done) {
   init.process({type: 'myapp'}, [
     // Prompt for these values.
     init.prompt('name'),
-    init.prompt('description', 'My badass app'),
+    init.prompt('description', 'My app description'),
     init.prompt('version', '0.0.1'),
     init.prompt('repository'),
     init.prompt('homepage'),
@@ -55,10 +55,10 @@ exports.template = function(grunt, init, done) {
       node_version: '>= 0.8.0',
       devDependencies: {
         'grunt-contrib-less': '~0.5.0',
-        'grunt-contrib-watch': '~0.2.0',
-        'grunt-contrib-uglify': '~0.1.1',
-        'grunt-contrib-jshint': '~0.1.1',
-        'grunt-contrib-connect': '~0.1.2',
+        'grunt-contrib-watch': '~0.3.1',
+        'grunt-contrib-uglify': '~0.1.2',
+        'grunt-contrib-jshint': '~0.2.0',
+        'grunt-contrib-connect': '~0.2.0',
         'grunt-open': '~0.2.0',
         "grunt": ">=0.4.0"
       },

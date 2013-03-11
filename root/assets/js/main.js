@@ -4,6 +4,6 @@ require.config({
   }
 });
 
-require(["jquery"],function(){
+require(["jquery"],function($){
   console.log("Hello Myapp!");
 });
