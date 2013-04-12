@@ -60,7 +60,7 @@ exports.template = function(grunt, init, done) {
         'grunt-contrib-jshint': '~0.2.0',
         'grunt-contrib-connect': '~0.2.0',
         'grunt-open': '~0.2.0',
-        "grunt": ">=0.4.0"
+        "grunt": "~0.4.1"
       },
     });
 
