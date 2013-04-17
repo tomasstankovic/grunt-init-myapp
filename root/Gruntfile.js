@@ -24,6 +24,9 @@ module.exports = function(grunt) {
     },
 
     uglify: {
+      options: {
+        report: "min"
+      },
       glob_to_multiple: {
         expand: true,
         cwd: 'assets/js/',
@@ -51,9 +54,9 @@ module.exports = function(grunt) {
 
     watch: {
       src: {
-        files: ['assets/js/**/*.js', 'assets/less/**/*.less'],
+        files: ['assets/js/**/*.js', 'assets/less/**/*.less', 'Gruntfile.js'],
         tasks: ['default']
-      },
+      }
     },
 
     connect: {
