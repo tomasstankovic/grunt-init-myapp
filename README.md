@@ -1,6 +1,6 @@
 # grunt-init-myapp
 
-> Create a new WebApp files with [grunt-init][], including LESS with LESSHAT mixins and RequireJS + /server, watch, jshint, uglify and automatic open/.
+> Create a new WebApp files with [grunt-init][], including LESS with LESSHAT mixins and RequireJS + /server, jshint, uglify and livereloading/.
 
 [grunt-init]: http://gruntjs.com/project-scaffolding
 

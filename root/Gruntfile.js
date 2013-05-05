@@ -53,9 +53,13 @@ module.exports = function(grunt) {
     },
 
     watch: {
+      options: {
+        livereload: true,
+      },
       src: {
         files: ['assets/js/**/*.js', 'assets/less/**/*.less', 'Gruntfile.js'],
-        tasks: ['default']
+        tasks: ['default'],
+
       }
     },
 

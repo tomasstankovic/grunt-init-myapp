@@ -13,7 +13,7 @@ exports.description = 'Create a new WebApp including LESS and RequireJS.';
 
 // Template-specific notes to be displayed before question prompts.
 exports.notes = 'HELLO! Let\'s build better internet! \nThis is webApp template ' +
-  'including LESS with LESSHAT mixins and RequireJS + /server, watch, jshint, uglify and automatic open/.';
+  'including LESS with LESSHAT mixins and RequireJS + /server, jshint, uglify and livereloading/.';
 
 // Template-specific notes to be displayed after question prompts.
 exports.after = 'Done! \nHappy Coding!';
@@ -51,15 +51,15 @@ exports.template = function(grunt, init, done) {
     // Generate package.json file, used by npm and grunt.
     init.writePackageJSON('package.json', {
       name: 'init-myapp',
-      version: '0.1.0',
-      node_version: '>= 0.8.0',
+      version: '0.0.1',
+      node_version: '>= 0.10.0',
       devDependencies: {
-        'grunt-contrib-less': '~0.5.0',
-        'grunt-contrib-watch': '~0.3.1',
-        'grunt-contrib-uglify': '~0.1.2',
-        'grunt-contrib-jshint': '~0.2.0',
-        'grunt-contrib-connect': '~0.2.0',
-        'grunt-open': '~0.2.0',
+        "grunt-contrib-less": "~0.5.0",
+        "grunt-contrib-watch": "~0.4.0",
+        "grunt-contrib-uglify": "~0.1.2",
+        "grunt-contrib-jshint": "~0.2.0",
+        "grunt-contrib-connect": "~0.2.0",
+        "grunt-open": "~0.2.0",
         "grunt": "~0.4.1"
       },
     });
