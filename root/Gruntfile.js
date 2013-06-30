@@ -23,16 +23,17 @@ module.exports = function(grunt) {
       },
     },
 
-    uglify: {
-      options: {
-        report: "min"
-      },
-      glob_to_multiple: {
-        expand: true,
-        cwd: 'assets/js/',
-        src: ['**/*.js'],
-        dest: 'assets/dist/',
-        ext: '.js'
+    requirejs: {
+      compile: {
+        options: {
+          name: "main",
+          baseUrl: "assets/js",
+          out: "assets/js/prod_build.js",
+          optimize: "uglify2",
+          paths: {
+            jquery: "../libs/jquery",
+          },
+        }
       }
     },
 
@@ -57,9 +58,8 @@ module.exports = function(grunt) {
         livereload: true,
       },
       src: {
-        files: ['assets/js/**/*.js', 'assets/less/**/*.less', 'Gruntfile.js'],
+        files: ['assets/js/**/*.js', 'assets/less/**/*.less','*.html', 'Gruntfile.js'],
         tasks: ['default'],
-
       }
     },
 
@@ -83,13 +83,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-open');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-requirejs');
 
   // Tasks definition.
   grunt.registerTask('default', ['jshint:gruntfile', 'jshint:src', 'less:dev' ]);
-  grunt.registerTask('build', ['jshint:gruntfile', 'jshint:src', 'uglify', 'less:production' ]);
+  grunt.registerTask('build', ['jshint:gruntfile', 'jshint:src', 'requirejs', 'less:production' ]);
   grunt.registerTask('server', ['connect', 'open', 'watch' ]);
 
 };

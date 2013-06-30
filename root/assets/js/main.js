@@ -1,9 +1,9 @@
 require.config({
-  paths:{
-    jquery: "../libs/jquery"
+  baseUrl: 'assets/libs',
+  paths: {
+    jquery: 'jquery'
   }
 });
-
 require(["jquery"],function($){
   console.log("Hello Myapp!");
 });

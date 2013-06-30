@@ -1,1 +1,7 @@
-h1{font-size:30px;text-align:center}
+/**
+ * MAIN LESS FILES IMPORT PLACE
+ */
+h1 {
+  font-size: 30px;
+  text-align: center;
+}

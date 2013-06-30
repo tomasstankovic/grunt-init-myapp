@@ -9,11 +9,20 @@
 <body>
 <h1>Hello MyApp!</h1>
 
+<!-- DEV USE -->
 <script data-main="assets/js/main" src="assets/libs/require.js"></script>
-<!-- NO CACHE REQUIRE.JS - DELETE IN PRODUCTION -->
 <script>
 require.config({ urlArgs: "v=" +  (new Date()).getTime() });
 </script>
+<script src="http://localhost:35729/livereload.js"></script>
+<!-- END DEV USE -->
+
+<!-- PRODUCTION USE -->
+<!--
+<script data-main="assets/prod_build" src="assets/libs/require.js"></script>
+-->
+<!-- END PRODUCTION USE -->
+
 </body>
 </html>
 

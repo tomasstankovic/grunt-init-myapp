@@ -1,6 +1,6 @@
 # grunt-init-myapp
 
-> Create a new WebApp files with [grunt-init][], including LESS with LESSHAT mixins and RequireJS + /server, jshint, uglify and livereloading/.
+> Create a new WebApp files with [grunt-init][], including LESS with LESSHAT mixins, RequireJS with r.js optimizer, jshint and livereloading /+ server/.
 
 [grunt-init]: http://gruntjs.com/project-scaffolding
 
@@ -20,16 +20,26 @@ npm install
 ```
 
 ## Workflow
-### Dev-build
+
+### Recomended dev workflow
+With watch and livereloading
+```
+grunt watch
+```
+
+### Server with watch and livereloading
+Default on localhost:9000
+```
+grunt server
+```
+
+### Default task
 ```
 grunt
 ```
+
 ### Production-build
-In production remove from index.html require.config and change data-main="assets/js/main" to data-main="assets/dist/main".
+In production remove 'DEV USE' section and uncomment 'PRODUCTION USE' html code
 ```
 grunt build
-```
-### Start server and watching
-```
-grunt server
 ```

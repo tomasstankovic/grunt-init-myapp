@@ -3,6 +3,8 @@
  * https://gruntjs.com/
  *
  * Copyright (c) 2013 Slinto - Tomas Stankovic
+ * www.slinto.sk
+ * @TomasStankovic
  * Licensed under the MIT license.
  */
 
@@ -52,15 +54,15 @@ exports.template = function(grunt, init, done) {
     init.writePackageJSON('package.json', {
       name: 'init-myapp',
       version: '0.0.1',
-      node_version: '>= 0.10.0',
+      node_version: '>= 0.10.x',
       devDependencies: {
-        "grunt-contrib-less": "~0.5.0",
-        "grunt-contrib-watch": "~0.4.0",
-        "grunt-contrib-uglify": "~0.1.2",
-        "grunt-contrib-jshint": "~0.2.0",
-        "grunt-contrib-connect": "~0.2.0",
-        "grunt-open": "~0.2.0",
-        "grunt": "~0.4.1"
+        "grunt": "0.4.x",
+        "grunt-open": "0.2.x",
+        "grunt-contrib-less": "0.6.x",
+        "grunt-contrib-watch": "0.4.x",
+        "grunt-contrib-jshint": "0.6.x",
+        "grunt-contrib-connect": "0.3.x",
+        "grunt-contrib-requirejs": "0.4.x"
       },
     });
 
