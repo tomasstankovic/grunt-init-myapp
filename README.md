@@ -39,7 +39,7 @@ grunt
 ```
 
 ### Production-build
-In production remove 'DEV USE' section and uncomment 'PRODUCTION USE' html code
+In production remove 'DEV USE' section and uncomment 'PRODUCTION USE' html code from index.html and others .html files
 ```
 grunt build
 ```

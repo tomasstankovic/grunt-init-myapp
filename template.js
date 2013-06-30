@@ -15,7 +15,7 @@ exports.description = 'Create a new WebApp including LESS and RequireJS.';
 
 // Template-specific notes to be displayed before question prompts.
 exports.notes = 'HELLO! Let\'s build better internet! \nThis is webApp template ' +
-  'including LESS with LESSHAT mixins and RequireJS + /server, jshint, uglify and livereloading/.';
+  'LESS with LESSHAT mixins, RequireJS with r.js optimizer, jshint and livereloading /+ server/';
 
 // Template-specific notes to be displayed after question prompts.
 exports.after = 'Done! \nHappy Coding!';
