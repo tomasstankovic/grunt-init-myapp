@@ -1,6 +1,7 @@
 # grunt-init-myapp
 
 > Create a new WebApp files with [grunt-init][], including LESS with LESSHAT mixins, RequireJS with r.js optimizer, jshint and livereloading /+ server/.
+> This plugin requires Grunt ~0.4.0
 
 [grunt-init]: http://gruntjs.com/project-scaffolding
 
