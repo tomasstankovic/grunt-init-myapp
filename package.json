@@ -1,0 +1,23 @@
+{
+  "name": "grunt-init-myapp",
+  "version": "0.2.0",
+  "description": "Create a new WebApp files with grunt-init, including LESS with LESSHAT mixins, RequireJS with r.js optimizer, jshint and livereloading /+ server/.",
+  "main": "template.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/slinto/grunt-init-myapp.git"
+  },
+  "keywords": [
+    "grunt",
+    "init",
+    "myapp",
+    "less",
+    "require.js",
+    "livereload"
+  ],
+  "author": "Tomas Stankovic",
+  "license": "MIT"
+}
