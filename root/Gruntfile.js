@@ -29,10 +29,7 @@ module.exports = function(grunt) {
           name: "main",
           baseUrl: "assets/js",
           out: "assets/js/prod_build.js",
-          optimize: "uglify2",
-          paths: {
-            jquery: "../libs/jquery",
-          },
+          optimize: "uglify2"
         }
       }
     },
@@ -40,7 +37,7 @@ module.exports = function(grunt) {
     less: {
       dev: {
         files: {
-          "assets/css/style.css": "assets/less/index.less"
+          "assets/css/style.css": "assets/css/index.less"
         }
       },
       production: {
@@ -48,7 +45,7 @@ module.exports = function(grunt) {
           yuicompress: true
         },
         files: {
-          "assets/css/style.css": "assets/less/index.less"
+          "assets/css/style.css": "assets/css/index.less"
         }
       }
     },
@@ -58,7 +55,7 @@ module.exports = function(grunt) {
         livereload: true,
       },
       src: {
-        files: ['assets/js/**/*.js', 'assets/less/**/*.less','*.html', 'Gruntfile.js'],
+        files: ['assets/js/**/*.js', 'assets/css/**/*.less','*.html', 'Gruntfile.js'],
         tasks: ['default'],
       }
     },
@@ -67,20 +64,14 @@ module.exports = function(grunt) {
       server: {
         options: {
           port: 9000,
-          base: '.'
+          base: '.',
+          open: true
         }
       }
-    },
-
-    open: {
-      server: {
-        url: 'http://localhost:<%= connect.server.options.port %>'
-      }
-    },
+    }
   });
 
   // These plugins provide necessary tasks.
-  grunt.loadNpmTasks('grunt-open');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -90,6 +81,6 @@ module.exports = function(grunt) {
   // Tasks definition.
   grunt.registerTask('default', ['jshint:gruntfile', 'jshint:src', 'less:dev' ]);
   grunt.registerTask('build', ['jshint:gruntfile', 'jshint:src', 'requirejs', 'less:production' ]);
-  grunt.registerTask('server', ['connect', 'open', 'watch' ]);
+  grunt.registerTask('server', ['connect', 'watch' ]);
 
 };

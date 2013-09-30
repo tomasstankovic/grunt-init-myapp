@@ -1,9 +1,3 @@
-require.config({
-  baseUrl: 'assets/libs',
-  paths: {
-    jquery: 'jquery'
-  }
-});
-require(["jquery"],function($){
+require([],function(){
   console.log("Hello Myapp!");
 });

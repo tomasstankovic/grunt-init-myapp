@@ -1,6 +1,6 @@
 {
   "name": "grunt-init-myapp",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "Create a new WebApp files with grunt-init, including LESS with LESSHAT mixins, RequireJS with r.js optimizer, jshint and livereloading /+ server/.",
   "main": "template.js",
   "scripts": {
@@ -16,6 +16,7 @@
     "myapp",
     "less",
     "require.js",
+    "require",
     "livereload"
   ],
   "author": "Tomas Stankovic",

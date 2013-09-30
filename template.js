@@ -30,7 +30,7 @@ exports.template = function(grunt, init, done) {
     // Prompt for these values.
     init.prompt('name'),
     init.prompt('description', 'My app description'),
-    init.prompt('version', '0.0.1'),
+    init.prompt('version', '0.1.0'),
     init.prompt('repository'),
     init.prompt('homepage'),
     init.prompt('licenses', 'MIT'),
@@ -53,15 +53,14 @@ exports.template = function(grunt, init, done) {
     // Generate package.json file, used by npm and grunt.
     init.writePackageJSON('package.json', {
       name: 'init-myapp',
-      version: '0.0.1',
+      version: '0.2.2',
       node_version: '>= 0.10.x',
       devDependencies: {
         "grunt": "0.4.x",
-        "grunt-open": "0.2.x",
-        "grunt-contrib-less": "0.6.x",
-        "grunt-contrib-watch": "0.4.x",
+        "grunt-contrib-less": "0.7.x",
+        "grunt-contrib-watch": "0.5.x",
         "grunt-contrib-jshint": "0.6.x",
-        "grunt-contrib-connect": "0.3.x",
+        "grunt-contrib-connect": "0.5.x",
         "grunt-contrib-requirejs": "0.4.x"
       },
     });
