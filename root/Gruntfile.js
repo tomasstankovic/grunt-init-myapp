@@ -6,7 +6,6 @@ module.exports = function(grunt) {
 
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
-    banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n',
 
     jshint: {
       gruntfile: {
@@ -17,9 +16,9 @@ module.exports = function(grunt) {
       },
       src: {
         options: {
-          jshintrc: 'assets/js/.jshintrc'
+          jshintrc: 'www/assets/js/.jshintrc'
         },
-        src: ['assets/js/**/*.js']
+        src: ['www/assets/js/**/*.js']
       },
     },
 
@@ -27,8 +26,8 @@ module.exports = function(grunt) {
       compile: {
         options: {
           name: "main",
-          baseUrl: "assets/js",
-          out: "assets/js/prod_build.js",
+          baseUrl: "www/assets/js",
+          out: "www/assets/dist/prod_build.js",
           optimize: "uglify2"
         }
       }
@@ -37,7 +36,7 @@ module.exports = function(grunt) {
     less: {
       dev: {
         files: {
-          "assets/css/style.css": "assets/css/index.less"
+          "www/assets/css/style.css": "www/assets/css/index.less"
         }
       },
       production: {
@@ -45,7 +44,7 @@ module.exports = function(grunt) {
           yuicompress: true
         },
         files: {
-          "assets/css/style.css": "assets/css/index.less"
+          "www/assets/css/style.css": "www/assets/css/index.less"
         }
       }
     },
@@ -55,7 +54,7 @@ module.exports = function(grunt) {
         livereload: true,
       },
       src: {
-        files: ['assets/js/**/*.js', 'assets/css/**/*.less','*.html', 'Gruntfile.js'],
+        files: ['www/assets/js/**/*.js', 'www/assets/css/**/*.less','www/*.html', 'Gruntfile.js'],
         tasks: ['default'],
       }
     },
@@ -64,7 +63,7 @@ module.exports = function(grunt) {
       server: {
         options: {
           port: 9000,
-          base: '.',
+          base: 'www',
           open: true
         }
       }

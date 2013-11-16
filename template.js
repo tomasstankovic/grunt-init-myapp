@@ -3,33 +3,26 @@
  * https://gruntjs.com/
  *
  * Copyright (c) 2013 Slinto - Tomas Stankovic
- * www.slinto.sk
+ * info@slinto.sk
  * @TomasStankovic
  * Licensed under the MIT license.
  */
 
 'use strict';
 
-// Basic template description.
 exports.description = 'Create a new WebApp including LESS and RequireJS.';
 
-// Template-specific notes to be displayed before question prompts.
 exports.notes = 'HELLO! Let\'s build better internet! \nThis is webApp template ' +
   'LESS with LESSHAT mixins, RequireJS with r.js optimizer, jshint and livereloading /+ server/';
 
-// Template-specific notes to be displayed after question prompts.
 exports.after = 'Done! \nHappy Coding!';
-
-// Any existing file or directory matching this wildcard will cause a warning.
 exports.warnOn = '*';
 
-// The actual init template.
 exports.template = function(grunt, init, done) {
 
   init.process({type: 'myapp'}, [
-    // Prompt for these values.
     init.prompt('name'),
-    init.prompt('description', 'My app description'),
+    init.prompt('description'),
     init.prompt('version', '0.0.1'),
     init.prompt('repository'),
     init.prompt('homepage'),
@@ -40,15 +33,9 @@ exports.template = function(grunt, init, done) {
   ], function(err, props) {
 
     props.keywords = [];
-
-    // Files to copy (and process).
     var files = init.filesToCopy(props);
-
-    // Add properly-named license files.
     init.addLicenseFiles(files, props.licenses);
-
-    // Actually copy (and process) files.
-    init.copyAndProcess(files, props, {noProcess: 'assets/**'});
+    init.copyAndProcess(files, props, {noProcess: 'www/assets/**'});
 
     // Generate package.json file, used by npm and grunt.
     init.writePackageJSON('package.json', {
@@ -62,7 +49,16 @@ exports.template = function(grunt, init, done) {
         "grunt-contrib-jshint": "0.7.x",
         "grunt-contrib-connect": "0.5.x",
         "grunt-contrib-requirejs": "0.4.x"
-      },
+      }
+    });
+
+    // Generate bower.json file, used by bower.
+    init.writePackageJSON('bower.json', {
+      name: props.name,
+      version: props.version,
+      dependencies: {
+        "lesshat": "https://github.com/csshat/lesshat.git"
+      }
     });
 
     // All done!

@@ -1,6 +1,6 @@
 # grunt-init-myapp
 
-Create a new WebApp files with [grunt-init][], including LESS with LESSHAT mixins, RequireJS with r.js optimizer, jshint and livereloading /+ server/.
+Create a new WebApp files with [grunt-init][], including Bower package manager, LESS with LESSHAT2 mixins, RequireJS with r.js optimizer, jshint, livereloading && server.
 
 [grunt-init]: http://gruntjs.com/project-scaffolding
 
