@@ -33,13 +33,13 @@ Default server on localhost:9000
 grunt server
 ```
 
+### Production build
+In production remove ```DEV USE``` section and uncomment ```PRODUCTION USE``` html code from ```index.html``` and others ```.html``` files
+```
+grunt build
+```
+
 ### Default task
 ```
 grunt
-```
-
-### Production-build
-In production remove ```DEV USE``` section and uncomment ```PRODUCTION USE``` html code from index.html and others .html files
-```
-grunt build
 ```
