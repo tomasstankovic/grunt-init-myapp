@@ -28,7 +28,7 @@ npm install && bower install
 ## Workflow
 
 ### Recomended dev workflow
-Default server on localhost:9000
+Default server on localhost:9000 (including livereload)
 ```
 grunt server
 ```
