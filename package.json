@@ -1,6 +1,6 @@
 {
   "name": "grunt-init-myapp",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Create a new WebApp files with grunt-init including Bower package manager, LESS with LESSHAT2 mixins, RequireJS with r.js optimizer, jshint, livereloading && server",
   "main": "template.js",
   "scripts": {

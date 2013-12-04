@@ -1,11 +1,17 @@
 # grunt-init-myapp
 
-Create a new WebApp files with [grunt-init][], including Bower package manager, LESS with LESSHAT2 mixins, RequireJS with r.js optimizer, jshint, livereloading && server.
+Create a new WebApp files with [grunt-init][], including Bower package manager, LESS with LESSHAT2 mixins, Normalize CSS, RequireJS with r.js optimizer, jshint, livereloading && server.
 
 [grunt-init]: http://gruntjs.com/project-scaffolding
 
+## Prerequisites
+This plugin requires Grunt ```0.4.x```
+```
+npm install -g grunt-cli
+npm install -g bower
+```
+
 ## Installation
-> This plugin requires Grunt '0.4.x'
 ```
 git clone git@github.com:slinto/grunt-init-myapp.git ~/.grunt-init/myapp
 ```
@@ -16,19 +22,13 @@ At the command-line, cd into an empty directory, run this command and follow the
 
 ```
 grunt-init myapp
-npm install
+npm install && bower install
 ```
 
 ## Workflow
 
 ### Recomended dev workflow
-With watch and livereloading
-```
-grunt watch
-```
-
-### Server with watch and livereloading
-Default on localhost:9000
+Default server on localhost:9000
 ```
 grunt server
 ```
@@ -39,7 +39,7 @@ grunt
 ```
 
 ### Production-build
-In production remove 'DEV USE' section and uncomment 'PRODUCTION USE' html code from index.html and others .html files
+In production remove ```DEV USE``` section and uncomment ```PRODUCTION USE``` html code from index.html and others .html files
 ```
 grunt build
 ```
