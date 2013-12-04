@@ -1,10 +1,8 @@
 'use strict';
 module.exports = function(grunt) {
 
-  // Project configuration.
   grunt.initConfig({
 
-    // Metadata.
     pkg: grunt.file.readJSON('package.json'),
 
     jshint: {
@@ -70,16 +68,18 @@ module.exports = function(grunt) {
     }
   });
 
-  // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
 
-  // Tasks definition.
   grunt.registerTask('default', ['jshint:gruntfile', 'jshint:src', 'less:dev' ]);
   grunt.registerTask('build', ['jshint:gruntfile', 'jshint:src', 'requirejs', 'less:production' ]);
-  grunt.registerTask('server', ['connect', 'watch' ]);
+
+  grunt.task.registerTask('server', 'Let\'s build something amazing!', function(){
+    grunt.task.run('default');
+    grunt.task.run(['connect', 'watch']);
+  });
 
 };

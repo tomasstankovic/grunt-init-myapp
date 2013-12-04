@@ -57,7 +57,8 @@ exports.template = function(grunt, init, done) {
       name: props.name,
       version: props.version,
       dependencies: {
-        "lesshat": "https://github.com/csshat/lesshat.git"
+        "lesshat": "https://github.com/csshat/lesshat.git",
+        "normalize-css": "git://github.com/necolas/normalize.css.git"
       }
     });
 
