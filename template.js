@@ -41,14 +41,14 @@ exports.template = function(grunt, init, done) {
     init.writePackageJSON('package.json', {
       name: props.name,
       version: props.version,
-      node_version: '>= 0.10.x',
+      node_version: '>= 0.10.0',
       devDependencies: {
-        "grunt": "0.4.x",
-        "grunt-contrib-less": "0.8.x",
-        "grunt-contrib-watch": "0.5.x",
-        "grunt-contrib-jshint": "0.7.x",
-        "grunt-contrib-connect": "0.5.x",
-        "grunt-contrib-requirejs": "0.4.x"
+        'grunt': '~0.4.2',
+        'grunt-contrib-less': '~0.8.3',
+        'grunt-contrib-watch': '~0.5.3',
+        'grunt-contrib-jshint': '~0.7.2',
+        'grunt-contrib-connect': '~0.5.0',
+        'grunt-contrib-requirejs': '~0.4.1'
       }
     });
 
@@ -57,8 +57,8 @@ exports.template = function(grunt, init, done) {
       name: props.name,
       version: props.version,
       dependencies: {
-        "lesshat": "https://github.com/csshat/lesshat.git",
-        "normalize-css": "git://github.com/necolas/normalize.css.git"
+        'lesshat': 'https://github.com/csshat/lesshat.git',
+        'normalize-css': 'git://github.com/necolas/normalize.css.git'
       }
     });
 
