@@ -24,10 +24,10 @@ module.exports = function(grunt) {
     requirejs: {
       compile: {
         options: {
-          name: "main",
-          baseUrl: "www/assets/js",
-          out: "www/assets/js/prod_build.js",
-          optimize: "uglify2"
+          name: 'main',
+          baseUrl: 'www/assets/js',
+          out: 'www/assets/js/prod_build.js',
+          optimize: 'uglify2'
         }
       }
     },
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
     less: {
       dev: {
         files: {
-          "www/assets/css/style.css": "www/assets/css/index.less"
+          'www/assets/css/style.css': 'www/assets/css/index.less'
         }
       },
       production: {
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
           report: 'gzip'
         },
         files: {
-          "www/assets/css/style.css": "www/assets/css/index.less"
+          'www/assets/css/style.css': 'www/assets/css/index.less'
         }
       }
     },
