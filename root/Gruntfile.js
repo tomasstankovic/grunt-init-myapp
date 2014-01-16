@@ -14,7 +14,8 @@ module.exports = function(grunt) {
       },
       src: {
         options: {
-          jshintrc: 'www/assets/js/.jshintrc'
+          jshintrc: 'www/assets/js/.jshintrc',
+          ignores: 'www/assets/js/prod_build.js'
         },
         src: ['www/assets/js/**/*.js']
       },
@@ -25,7 +26,7 @@ module.exports = function(grunt) {
         options: {
           name: "main",
           baseUrl: "www/assets/js",
-          out: "www/assets/dist/prod_build.js",
+          out: "www/assets/js/prod_build.js",
           optimize: "uglify2"
         }
       }
@@ -39,11 +40,20 @@ module.exports = function(grunt) {
       },
       production: {
         options: {
-          yuicompress: true
+          cleancss: true,
+          report: 'gzip'
         },
         files: {
           "www/assets/css/style.css": "www/assets/css/index.less"
         }
+      }
+    },
+
+    copy: {
+      main: {
+        files: [
+          {expand: true, cwd: 'www/', src: ['**'], dest: 'dist'},
+        ]
       }
     },
 
@@ -68,6 +78,7 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -75,7 +86,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-requirejs');
 
   grunt.registerTask('default', ['jshint:gruntfile', 'jshint:src', 'less:dev' ]);
-  grunt.registerTask('build', ['jshint:gruntfile', 'jshint:src', 'requirejs', 'less:production' ]);
+  grunt.registerTask('build', ['jshint:gruntfile', 'jshint:src', 'requirejs', 'less:production', 'copy']);
 
   grunt.task.registerTask('server', 'Let\'s build something amazing!', function(){
     grunt.task.run('default');

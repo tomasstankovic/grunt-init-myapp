@@ -1,6 +1,6 @@
 # grunt-init-myapp
 
-Create a new WebApp files with [grunt-init][], including Bower package manager, LESS with LESSHAT2 mixins, Normalize CSS, RequireJS with r.js optimizer, jshint, livereloading && server.
+Create a new WebApp files with [grunt-init][], including Bower package manager, LESS with LESSHAT2 mixins, Normalize CSS, RequireJS with r.js optimizer, jshint, livereloading.
 
 [grunt-init]: http://gruntjs.com/project-scaffolding
 
@@ -34,7 +34,7 @@ grunt server
 ```
 
 ### Production build
-In production remove ```DEV USE``` section and uncomment ```PRODUCTION USE``` html code from ```index.html``` and others ```.html``` files
+In production remove ```DEV USE``` section and uncomment ```PRODUCTION USE``` html code from ```index.html``` and others ```.html``` files. Final build is in ```/dist``` folder.
 ```
 grunt build
 ```

@@ -2,7 +2,7 @@
  * grunt-init-myapp
  * https://gruntjs.com/
  *
- * Copyright (c) 2013 Slinto - Tomas Stankovic
+ * Copyright (c) 2014 Slinto - Tomas Stankovic
  * info@slinto.sk
  * @TomasStankovic
  * Licensed under the MIT license.
@@ -13,7 +13,7 @@
 exports.description = 'Create a new WebApp including LESS and RequireJS.';
 
 exports.notes = 'HELLO! Let\'s build better internet! \nThis is webApp template ' +
-  'LESS with LESSHAT mixins, RequireJS with r.js optimizer, jshint and livereloading /+ server/';
+  'LESS with LESSHAT mixins, RequireJS with r.js optimizer, jshint and livereloading';
 
 exports.after = 'Done! \nHappy Coding!';
 exports.warnOn = '*';
@@ -44,10 +44,11 @@ exports.template = function(grunt, init, done) {
       node_version: '>= 0.10.0',
       devDependencies: {
         'grunt': '~0.4.2',
-        'grunt-contrib-less': '~0.8.3',
+        'grunt-contrib-less': '~0.9.0',
+        'grunt-contrib-copy': '~0.5.0',
         'grunt-contrib-watch': '~0.5.3',
-        'grunt-contrib-jshint': '~0.7.2',
-        'grunt-contrib-connect': '~0.5.0',
+        'grunt-contrib-jshint': '~0.8.0',
+        'grunt-contrib-connect': '~0.6.0',
         'grunt-contrib-requirejs': '~0.4.1'
       }
     });
@@ -57,8 +58,7 @@ exports.template = function(grunt, init, done) {
       name: props.name,
       version: props.version,
       dependencies: {
-        'lesshat': 'https://github.com/csshat/lesshat.git',
-        'normalize-css': 'git://github.com/necolas/normalize.css.git'
+        'lesshat': 'https://github.com/csshat/lesshat.git'
       }
     });
 
