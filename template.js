@@ -43,13 +43,13 @@ exports.template = function(grunt, init, done) {
       version: props.version,
       node_version: '>= 0.10.0',
       devDependencies: {
-        'grunt': '~0.4.2',
-        'grunt-contrib-less': '~0.9.0',
+        'grunt': '~0.4.3',
+        'grunt-contrib-less': '~0.10.0',
         'grunt-contrib-copy': '~0.5.0',
         'grunt-contrib-watch': '~0.5.3',
         'grunt-contrib-jshint': '~0.8.0',
-        'grunt-contrib-connect': '~0.6.0',
-        'grunt-contrib-requirejs': '~0.4.1'
+        'grunt-contrib-connect': '~0.7.1',
+        'grunt-contrib-requirejs': '~0.4.3'
       }
     });
 
