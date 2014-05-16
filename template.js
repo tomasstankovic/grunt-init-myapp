@@ -21,7 +21,7 @@ exports.warnOn = '*';
 exports.template = function(grunt, init, done) {
 
   init.process({type: 'myapp'}, [
-    init.prompt('name'),
+    init.prompt('name', 'MyApp'),
     init.prompt('description'),
     init.prompt('version', '0.0.1'),
     init.prompt('repository'),
@@ -43,13 +43,13 @@ exports.template = function(grunt, init, done) {
       version: props.version,
       node_version: '>= 0.10.0',
       devDependencies: {
-        'grunt': '~0.4.3',
-        'grunt-contrib-less': '~0.10.0',
-        'grunt-contrib-copy': '~0.5.0',
-        'grunt-contrib-watch': '~0.5.3',
-        'grunt-contrib-jshint': '~0.8.0',
-        'grunt-contrib-connect': '~0.7.1',
-        'grunt-contrib-requirejs': '~0.4.3'
+        'grunt': '^0.4.5',
+        'grunt-contrib-connect': '^0.7.1',
+        'grunt-contrib-copy': '^0.5.0',
+        'grunt-contrib-jshint': '^0.10.0',
+        'grunt-contrib-less': '^0.11.0',
+        'grunt-contrib-requirejs': '^0.4.4',
+        'grunt-contrib-watch': '^0.6.1'
       }
     });
 
