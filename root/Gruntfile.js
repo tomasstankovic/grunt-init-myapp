@@ -78,12 +78,8 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-contrib-requirejs');
+
+  require('jit-grunt')(grunt);
 
   grunt.registerTask('default', ['jshint:gruntfile', 'jshint:src', 'less:dev' ]);
   grunt.registerTask('build', ['jshint:gruntfile', 'jshint:src', 'requirejs', 'less:production', 'copy']);

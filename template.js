@@ -49,7 +49,8 @@ exports.template = function(grunt, init, done) {
         'grunt-contrib-jshint': '^0.10.0',
         'grunt-contrib-less': '^0.11.0',
         'grunt-contrib-requirejs': '^0.4.4',
-        'grunt-contrib-watch': '^0.6.1'
+        'grunt-contrib-watch': '^0.6.1',
+        "jit-grunt": "^0.6.0"
       }
     });
 
